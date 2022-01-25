@@ -12,7 +12,7 @@ frotation_matrix = cv2.getRotationMatrix2D(center, -93, 1.0)
 frotated_bill = cv2.warpAffine(banknote, frotation_matrix, (cols, rows))
 ```
 ![](images/rotated_front.jpg)
-Rotate image -93 degrees to straighten front-facing bill
+Rotate image -93 degrees to straighten front-facing bill\
 ## 1.2 Crop Image
 ```
 front_bill = frotated_bill[26:67, 21:87]
