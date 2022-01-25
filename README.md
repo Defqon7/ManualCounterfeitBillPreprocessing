@@ -60,7 +60,7 @@ backfacing_bill = brotated_bill[13:58, 7:82]
 cv2.imshow('Cropped back-facing bill', backfacing_bill)
 ```
 ![](images/backfacing_bill.jpg)
-## 3. Inputs → Outputs
+## 3. Input → Outputs
 ![](images/banknote.jpg)
 →
 ![](images/frontfacing_bill.jpg)
