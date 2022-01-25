@@ -18,7 +18,8 @@ Rotate image -93 degrees to straighten front-facing bill
 front_bill = frotated_bill[26:67, 21:87]
 ```
 ![](images/cropped_front.jpg)
-## Fix Shear in Bill
+## 1.3 Fix Shear in Bill
+### 1.3.1 Find Corners of Bill
 ```
 pts1 = np.float32([[2, 0], [65, 1], [0, 40], [63, 40]])
 pts2 = np.float32([[0, 0], [66, 0], [0, 41], [66, 41]])
@@ -26,12 +27,13 @@ plt.imshow(front_bill)
 plt.scatter(pts1[:, 0], pts1[:, 1], color='red', s=100)
 plt.show()
 ```
-![](images/dots.jpg)
+![](images/dots.jpg)<br>
 Create a plot to find coordinates of corners
+### 1.3.2 Warp Image
 ```
 M = cv2.getPerspectiveTransform(pts1, pts2)
 frontfacing_bill = cv2.warpPerspective(front_bill, M, (66, 41))
 cv2.imshow('Front-Facing Bill', frontfacing_bill)
 ```
-![](images/frontfacing_bill.jpg)
+![](images/frontfacing_bill.jpg)<br>
 Warp image to remove shear
