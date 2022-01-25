@@ -61,8 +61,8 @@ cv2.imshow('Cropped back-facing bill', backfacing_bill)
 ```
 ![](images/backfacing_bill.jpg)
 ## 3. Input → Outputs
+## 3.1 Input
 ![](images/banknote.jpg)
-→
+## 3.2 Outputs
 ![](images/frontfacing_bill.jpg)
-+
 ![](images/backfacing_bill.jpg)
